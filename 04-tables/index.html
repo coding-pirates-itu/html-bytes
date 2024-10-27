@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <style>
+        table {
+            background-color: cyan;
+        }
+        table, th, td {
+            border: 2px solid blue;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tables</h1>
+
+    <table>
+        <caption>My phonebook</caption>
+        <colgroup>
+            <col span="1" style="background-color: lightgray;"/>
+        </colgroup>
+        <tr>
+            <th style="width: 100px;">ID</th>
+            <th colspan="2">Name</th>
+            <th>Phone</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Asbjørn</td>
+            <td>Nielsen</td>
+            <td>11-22-33-44</td>
+        </tr>
+        <tr>
+            <td rowspan="2">42</td>
+            <td rowspan="2">Bodil</td>
+            <td rowspan="2">Nexø</td>
+            <td>55-66-77-88</td>
+        </tr>
+        <tr>
+            <td>55-66-77-99</td>
+        </tr>
+    </table>
+</body>
+</html>

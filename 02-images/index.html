@@ -10,10 +10,18 @@
     <h1>Lesson 2</h1>
 
     <h2>Image</h2>
-    <p>Insert an image.</p>
-    <img src="dannebrog.jpg" width="200"/>
-    <p>Adjust its size and alignment. Set text around it.</p>
+    <p>Insert an image: <code>&lt;img&gt;</code>.</p>
+    <img src="dannebrog.jpg" alt="Dannebrog" width="200"/>
+    <p>Adjust its size and alignment: <code>width</code>, <code>margin</code>, <code>float</code>.</p>
+    <p>Set text around it.</p>
     
+    <h2>Map</h2>
+    <img src="dannebrog.jpg" alt="Dannebrog" width="200" usemap="#dannebrog"/>
+    <map name="dannebrog">
+        <area shape="rect" coords="1,1,50,47" alt="red" href="#" onclick="alert('red')"/>
+        <area shape="rect" coords="50,1,67,120" alt="white" href="white.html"/>
+    </map>
+
     <h2>Favicon</h2>
     <ol>
         <li>Find an image for favicon. Check its shape and transparency.</li>
