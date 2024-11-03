@@ -1,0 +1,43 @@
+#grass {
+    background-color: rgb(20, 83, 20);
+    width: 100vw;
+    height: 65vh;
+}
+
+#wall {
+    position: absolute;
+    top: 20vh;
+    left: 25vw;
+    width: 50vw;
+    height: 40vh;
+    background-color: white;
+}
+    
+#window {
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    width: 30%;
+    height: 30%;
+    background-color: blue;
+}
+
+#door {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    width: 30%;
+    height: 70%;
+    background-color: rgb(66, 36, 11);
+}
+
+#roof {
+    position: absolute;
+    top: 8vh;
+    left: 22vw;
+    right: 22vw;
+    height: 5vh;
+    border-bottom: 7vh solid rgb(144, 24, 24);
+    border-left: 5vh solid transparent;
+    border-right: 5vh solid transparent;
+}

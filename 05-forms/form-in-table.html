@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms (table layout)</title>
+    <style>
+        tr > td {
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+    <form action="./done.html" method="get">
+        <table>
+            <tr>
+                <td><label for="name">Name:</label></td>
+                <td><input type="text" id="name" name="name" placeholder="Your first name"/></td>
+            </tr>
+            
+            <tr>
+                <td><label for="birth">Birthday:</label></td>
+                <td><input type="date" id="birth" name="birthday"/></td>
+            </tr>
+            
+            <tr>
+                <td><label for="gender">Gender:</label></td>
+                <td><input type="radio" id="gender-boy" name="gender" value="boy"/><label for="gender-boy">Boy</label>
+                    <input type="radio" id="gender-girl" name="gender" value="girl"/><label for="gender-girl">Girl</label></td>
+            </tr>
+
+            <tr>
+                <td><label for="math">Had math today:</label></td>
+                <td><input type="checkbox" id="math" name="math"/></td>
+            </tr>
+
+            <tr>
+                <td><label for="color">Favorite colour:</label></td>
+                <td>
+                    <select id="color" name="color">
+                        <option value="red">Red</option>
+                        <option value="green" selected>Green</option>
+                        <option value="blue">Blue</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="bio">Biography:</label></td>
+                <td><textarea name="bio" cols="40" rows="5"></textarea></td>
+            </tr>
+            
+            <tr><td><input type="submit" value="Submit"/></td></tr>
+        </table>
+      </form>
+</body>
+</html>

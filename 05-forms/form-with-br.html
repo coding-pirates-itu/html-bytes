@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms (br layout)</title>
+    <style>
+        form > label {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <form action="./done.html" method="get">
+        <fieldset>
+            <legend>Personal</legend>
+
+            <label for="name">Name:</label><br/>
+            <input type="text" id="name" name="name" placeholder="Your first name"/><br/>
+
+            <label for="birth">Birthday:</label><br/>
+            <input type="date" id="birth" name="birthday"/><br/>
+    
+            <label for="gender">Gender:</label><br/>
+            <input type="radio" id="gender-boy" name="gender" value="boy"/><label for="gender-boy">Boy</label>
+            <input type="radio" id="gender-girl" name="gender" value="girl"/><label for="gender-girl">Girl</label>
+        </fieldset>
+
+        <label for="math">Had math today:</label>
+        <input type="checkbox" id="math" name="math"/>
+        <br/>
+
+        <label for="color">Favorite colour:</label>
+        <select id="color" name="color">
+            <option value="red">Red</option>
+            <option value="green" selected>Green</option>
+            <option value="blue">Blue</option>
+        </select>
+        <br/>
+
+        <label for="bio">Biography:</label><br/>
+        <textarea name="bio" cols="40" rows="5"></textarea>
+        <br/>
+        
+        <br/>
+        <input type="submit" value="Submit"/>
+      </form>
+</body>
+</html>
