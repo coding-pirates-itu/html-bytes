@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript functions</title>
+    <style>
+        .inlet {
+            width: 50%;
+            padding: 0 0 10px 10px;
+            border: 1px solid gray;
+            background-color: antiquewhite;
+        }
+    </style>
+    <script>
+        function toggle(id) {
+            const st = document.getElementById(id).style
+            if (st.display === 'none') {
+                st.display = 'block'
+            } else {
+                st.display = 'none'
+            }
+        }
+
+        function createList(id, items) {
+            var df = document.createDocumentFragment()
+            items.forEach(e => {
+                const li = document.createElement('li');
+                li.textContent = e;
+                df.appendChild(li);
+            });
+            
+            document.getElementById(id).appendChild(df)
+        }
+
+        function draw(id) {
+            const canvas = document.getElementById(id);
+            const ctx = canvas.getContext("2d");
+            ctx.strokeStyle = "black";
+            ctx.fillStyle = "red";
+            ctx.fillRect(0, 0, 200, 100);
+
+            ctx.fillStyle = "blue";
+            ctx.beginPath();
+            ctx.arc(300, 100, 50, 0, 2 * Math.PI);
+            ctx.fill();
+
+            ctx.shadowBlur = 20;
+            ctx.shadowColor = "black";
+            ctx.font = "30px Verdana";
+            ctx.strokeText("Hello World!", 10, 150);
+        }
+    </script>
+</head>
+<body>
+    <p><button onclick="toggle('toggle')">Toggle</button></p>
+    <p><div id="toggle" style="display: none;" class="inlet"><h2>Hidden article</h2>This is some hidden text</div></p>
+
+    <p><button onclick="createList('list', ['Apple', 'Banana', 'Coconut'])">Add to list</button></p>
+    <ul id="list"></ul>
+
+    <p><button onclick="draw('canvas')">Draw</button></p>
+    <canvas id="canvas" width="400" height="200" style="border:1px solid black;"></canvas>
+</body>
+</html>

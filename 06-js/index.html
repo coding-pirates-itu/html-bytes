@@ -8,13 +8,20 @@
 <body>
     <h1>Basics</h1>
 
-    <p><button onclick="document.write('<h1>Clicked</h1>')">Write</button></p>
+    <p><button onclick="document.write('<h1>Clicked</h1>')">Write HTML</button></p>
 
-    <button onclick="document.getElementById('date').innerHTML = Date()">InnerHTML</button>
+    <p><button onclick="document.body.innerHTML += '<h3>Clicked</h3>'">Add HTML to body</button></p>
+
+    <button onclick="document.getElementById('date').innerHTML = Date()">Inner HTML</button>
     <p id="date"></p>
 
-    <p><button onclick="console.log('Clicked')">Console</button></p>
+    <p><button onclick="console.log('Clicked')">Console log</button></p>
 
     <p><button onclick="document.location='https://dr.dk'">Link</button></p>
+
+    <p><a href="#" onclick="document.location='https://dr.dk'">Link</a></p>
+
+    <p><button onclick="document.getElementById('toggle').style.display = 'block'">Toggle</button></p>
+    <p><div id="toggle" style="display: none;">HIDDEN</div></p>
 </body>
 </html>
