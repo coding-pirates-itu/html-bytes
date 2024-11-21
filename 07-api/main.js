@@ -3,8 +3,8 @@ async function process(elemId) {
     let locationUrl = 'http://ip-api.com/json/?fields=status,message,country,countryCode,regionName,city,lat,lon'
 
     async function getJson(url) {
-        let response = await fetch(url);
-        let data = await response.json();
+        const response = await fetch(url);
+        const data = await response.json();
         return data;
     }
     

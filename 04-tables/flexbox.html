@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        #cont1 {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+        }
+        .elem1 {
+            border: 1px solid black;
+            flex-grow: 1;
+        }
+        #g1c2 { flex-grow: 2;}
+
+        #cont2 {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+        .elem2 {
+            border: 1px solid black;
+            flex-basis: 22vw;
+        }
+        @media (max-width: 400px) {
+            #cont1 {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Share the line</h2>
+
+    <div id="cont1">
+        <div class="elem1">1</div>
+        <div class="elem1" id="g1c2">2</div>
+        <div class="elem1">3</div>
+        <div class="elem1">4</div>
+    </div>
+
+    <h2>Wrap</h2>
+
+    <div id="cont2">
+        <div class="elem2">pasta</div>
+        <div class="elem2">pesto</div>
+        <div class="elem2">toast</div>
+        <div class="elem2">pizza</div>
+        <div class="elem2">burger</div>
+        <div class="elem2">burger eller pizza eller pizza eller pizza eller pizza</div>
+        <div class="elem2">Extra</div>
+    </div>
+</body>
+</html>
