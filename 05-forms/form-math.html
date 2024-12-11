@@ -6,13 +6,23 @@
     <title>Form with math</title>
 </head>
 <body>
-    <form oninput="x.value = parseInt(a.value) + parseInt(b.value)">
-      0
-      <input type="range" id="a" name="a" value="50"/>
-      100 + 0
-      <input type="range" id="b" name="b" value="50"/>
-      100 =
-      <output name="x" for="a b">100</output>
+    <form oninput="
+      x.value = parseInt(a.value) + parseInt(b.value);
+      y.value = parseInt(a.value) - parseInt(b.value);
+      aout.value = a.value;
+      bout.value = b.value">
+        0
+        <input type="range" id="a" name="a" value="50"/>
+        100 + 0
+        <input type="range" id="b" name="b" value="50"/>
+        100 =
+        <output name="x" for="a b">100</output>
+        /
+        <output name="y" for="a b">0</output>
+        <br/>
+        a = <output name="aout" for="a">50</output>
+        <br/>
+        b = <output name="bout" for="b">50</output>
     </form>
 </body>
 </html>

@@ -1,6 +1,6 @@
 async function process(elemId) {
     // https://ip-api.com/docs/api:json
-    let locationUrl = 'http://ip-api.com/json/?fields=status,message,country,countryCode,regionName,city,lat,lon'
+    const locationUrl = 'http://ip-api.com/json/?fields=status,message,country,countryCode,regionName,city,lat,lon';
 
     async function getJson(url) {
         const response = await fetch(url);

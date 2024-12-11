@@ -7,9 +7,15 @@
     <style>
         .inlet {
             width: 50%;
+            margin-left: 20px;
             padding: 0 0 10px 10px;
             border: 1px solid gray;
             background-color: antiquewhite;
+            color: rgb(124, 31, 124);
+        }
+        .inlet h2 {
+            color: red;
+            font-style: italic;
         }
     </style>
     <script>
@@ -22,14 +28,16 @@
             }
         }
 
-        function createList(id, items) {
-            var df = document.createDocumentFragment()
-            items.forEach(e => {
-                const li = document.createElement('li');
-                li.textContent = e;
-                df.appendChild(li);
-            });
+        function addToList(id, items) {
+            const df = document.createDocumentFragment();
             
+            function addLi(item) {
+                const li = document.createElement('li');
+                li.textContent = item;
+                df.appendChild(li);
+            }
+
+            items.forEach(addLi);
             document.getElementById(id).appendChild(df)
         }
 
@@ -53,10 +61,11 @@
     </script>
 </head>
 <body>
-    <p><button onclick="toggle('toggle')">Toggle</button></p>
-    <p><div id="toggle" style="display: none;" class="inlet"><h2>Hidden article</h2>This is some hidden text</div></p>
+    <p><button onclick="toggle('toggle'); toggle('toggle2')">Toggle</button></p>
+    <p><div id="toggle" style="display: none;" class="inlet"><h2>Hidden article</h2>This is some hidden text.</div></p>
+    <p><div id="toggle2" style="display: block; float: right" class="inlet"><h2>Show article</h2>This is some normal text.</div></p>
 
-    <p><button onclick="createList('list', ['Apple', 'Banana', 'Coconut'])">Add to list</button></p>
+    <p><button onclick="addToList('list', ['Apple', 'Banana', 'Coconut'])">Add to list</button></p>
     <ul id="list"></ul>
 
     <p><button onclick="draw('canvas')">Draw</button></p>
